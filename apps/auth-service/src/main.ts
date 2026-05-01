@@ -1,5 +1,8 @@
-import { NestFactory } from '@nestjs/core';
-import { AuthServiceModule } from './auth-service.module';
+import { NestFactory } from "@nestjs/core";
+import { AuthServiceModule } from "./auth-service.module";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 async function bootstrap() {
   const app = await NestFactory.create(AuthServiceModule);
