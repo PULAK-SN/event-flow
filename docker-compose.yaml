@@ -61,15 +61,6 @@ services:
       timeout: 5s
       retries: 5
 
-  # Redis
-  redis:
-    image: redis:7-alpine
-    container_name: eventflowapp-redis
-    ports:
-      - "6379:6379"
-    volumes:
-      - redis-data:/data
-
   # Mailhog (email testing)
   mailhog:
     image: mailhog/mailhog:latest
